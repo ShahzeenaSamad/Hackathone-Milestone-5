@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="left_side">
+      <div class="profileText">
+        <div class="imgBx">
+          <img class="photo" id="profile-img" src="profile.jpg" alt="Profile Picture"/>
+        </div>
+        <br/>
+        <h2 id="profile-name">Shahzeena Samad <br/> <span>Web Developer</span></h2>
+      </div><br/>
+      
+      <div class="contactInfo">
+        <h3 class="title">Contact Info</h3>
+        <ul>
+          <li>
+            <span class="icon"><i class="fa fa-phone"></i></span>
+            <span class="text" id="resume-phone">+92 3121066438</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa fa-envelope-o"></i></span>
+            <span class="text" id="resume-email">Shahzeenaashfaq92@gmail.com</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa fa-linkedin"></i></span>
+            <span class="text" id="resume-linkedin">Linkedin</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa fa-github"></i></span>
+            <span class="text" id="resume-github">Github</span>
+          </li>
+        </ul>
+      </div><br/>
+     
+    </div>
+    
+    <!-- Right Side -->
+    <div class="right_side">
+      <div class="about">
+        <h2 class="title2">About Me</h2>
+        <p id="profile-description">
+        </p>
+      </div> 
+
+      <div class="about education">
+        <h2 class="title2">Education</h2>
+        <div id="education-container" class="education-grid">
+          <!-- Dynamic Education Items will appear here -->
+        </div>
+      </div>
+
+
+      <div class="about">
+        <h2 class="title2">Experience</h2>
+        <div id="experience-container" class="box">
+          <!-- Dynamic Experience Items will appear here -->
+        </div>
+      </div>
+
+      <div class="about skills">
+        <h2 class="title2">Professional Skills</h2>
+        <div id="skills-container" class="box">
+          <!-- Dynamic Skills will appear here -->
+        </div>
+      </div>
+      
+      
+      <div class="about interest">
+        <h2 class="title2">Interests</h2>
+        <div id="interests">
+          <!-- Dynamic Interests will appear here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <h2>Fill in your Information</h2>
+    <form id="resume-form">
+     
+      <h3>Name</h3>
+      <div id="name-form">
+        <input type="text" id="name" placeholder="Enter your name here" required />
+        <button type="button" onclick="addName()">Submit</button>
+      </div>/
+      <div id="profile-name"></div>
+      
+      <h3>Email</h3>
+<div id="email-form">
+  <input type="text" id="email-input" placeholder="Enter your email here" required />
+  <button type="button" onclick="addEmail()">Submit</button>
+</div>
+<div id="profile-email"></div>
+
+<h3>Phone</h3>
+<div id="phone-form">
+  <input type="text" id="phone-input" placeholder="Enter your number here" required />
+  <button type="button" onclick="addPhone()">Submit</button>
+</div>
+<div id="profile-phone"></div>
+
+<h3>LinkedIn</h3>
+<div id="linkedin-form">
+  <input type="text" id="linkedin-input" placeholder="Enter your LinkedIn URL" required />
+  <button type="button" onclick="addLinkedIn()">Submit</button>
+</div>
+<div id="profile-linkedin"></div>
+
+<h3>GitHub</h3>
+<div id="github-form">
+  <input type="text" id="github-input" placeholder="Enter your GitHub URL" required />
+  <button type="button" onclick="addGitHub()">Submit</button>
+</div>
+<div id="profile-github"></div>
+
+
+      <h3>About me</h3>
+  <div id="about-form">
+    <input type="text" id="about" placeholder="Enter a brief description about yourself..." required />
+    <button type="button" onclick="addAbout()">Submit</button>
+  </div>
+  <div id="profile-description"></div> <!-- Display about here -->
+
+      
+      <div>
+        <label for="profile-img-upload">Profile Image</label>
+        <input type="file" id="profile-img-upload" accept="image/*" />
+      </div>
+      
+      <h3>Education</h3>
+      <div id="education-form">
+        <input type="text" id="degree" placeholder="Degree" required />
+        <input type="text" id="institution" placeholder="Institution" required />
+        <input type="text" id="year" placeholder="Year" required />
+        <button type="button" onclick="addEducation()">Add Education</button>
+      </div>
+
+      <h3>Experience</h3>
+      <div id="experience-form">
+        <input type="text" id="job-title" placeholder="Job Title" required />
+        <input type="text" id="company" placeholder="Company" required />
+        <input type="text" id="experience-year" placeholder="Year" required />
+        <button type="button" onclick="addExperience()">Add Experience</button>
+      </div>
+
+      <h3>Skills</h3>
+      <input type="text" id="skills-input" placeholder="Skills" />
+      <button type="button" onclick="addSkill()">Add Skill</button>
+
+      <h3>Interests</h3>
+      <input type="text" id="interests-input" placeholder="Your Interests" />
+      <button type="button" onclick="addInterest()">Add Interest</button>
+
+      <button type="submit">Generate Resume</button>
+      
+      <button type="button" onclick="downloadPDF()">Download as PDF</button>
+
+    </form>
+    <div class="shareable-link-container">
+      <input type="text" id="shareable-link" readonly placeholder="Your shareable link will appear here" />
+      <button type="button" id="share-link-button">Share Link</button>
+    </div>
+  </div>
+ 
+  <script src="app.js"></script>
+</body>
+</html>

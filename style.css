@@ -1,0 +1,389 @@
+
+
+/* General Layout */
+body {
+  background: #f3f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 90%;
+  max-width: 1100px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  margin-top: 30px;
+}
+
+/* Left and Right Side Styling */
+.left_side, .right_side {
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.left_side {
+  background: #2A3663; /* Deep Blue */
+  color: #ffffff;
+}
+
+.right_side {
+  background: #B59F78; /* Warm Golden Brown */
+  color: #333;
+}
+
+h2, h3, h4, h5 {
+  margin-bottom: 10px;
+  color: #2A3663; 
+}
+
+
+
+h2 span {
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  color: #FFD700;
+}
+.left_side h2 {
+  color: #B59F78;
+}
+
+
+/* Profile Section */
+.profileText .imgBx img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+}
+
+/* Update for profile image */
+.imgBx img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+/* Form Styles for Profile Image */
+form input[type="file"] {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+/* Contact Information Styling */
+.contactInfo .title {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 12px;
+  color: #B59F78;
+}
+
+.contactInfo ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contactInfo ul li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.contactInfo ul li .icon {
+  margin-right: 12px;
+  color: #FFD700;
+}
+
+.contactInfo ul li .text {
+  color: #ffffff;
+}
+
+.right_side .about p {
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/* Form Section Styling */
+.form-container {
+  margin-top: 30px;
+  background-color: #2A3663; /* Deep Blue background for form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #2A3663; /* Deep Blue Border for the form */
+}
+
+.form-container h2, .form-container h3, .form-container h4, .form-container h5 {
+  color: white; /* White headings in the form */
+}
+
+form div {
+  margin-bottom: 15px;
+  background-color: #B59F78; /* Golden Brown background for form fields */
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form div:hover {
+  background-color: #D9D2A5; /* Lighter shade on hover */
+}
+
+/* Form Inputs and Textareas */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f4f4f4; /* Light grey background for inputs */
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #2A3663; /* Deep Blue border on focus */
+  background-color: #fff; /* White background on focus */
+}
+
+/* Submit Button */
+button {
+  padding: 12px 20px;
+  background-color: #2A3663; /* Deep Blue button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #B59F78; /* Golden Brown button on hover */
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* About Me Section */
+#about-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 14px;
+  min-height: 150px; /* Set a minimum height for better readability */
+  margin-top: 2px;
+  background-color: #f4f4f4;
+}
+
+/* Form Label Styling */
+form label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2A3663; /* Deep Blue color for labels */
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Skills and Interests Section Styling */
+.skills-container, .interests-container {
+  background-color: #B59F78; /* Golden Brown background */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skills-container h3, .interests-container h3 {
+  color: white; /* Set section headings to white */
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.skills-container ul, .interests-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-container ul li, .interests-container ul li {
+  margin-bottom: 10px;
+  color: #ffffff; /* White text for list items */
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.skills-container ul li .icon, .interests-container ul li .icon {
+  margin-right: 12px;
+  color: #FFD700; /* Golden Brown icon color */
+}
+
+.skills-container .skill-item, .interests-container .interest-item {
+  color: #ffffff; /* White color for skill/interest items */
+  font-size: 1em;
+}
+
+/* Hover Effect for List Items */
+.skills-container ul li:hover, .interests-container ul li:hover {
+  background-color: #2A3663; /* Deep Blue background on hover */
+  color: #ffffff; /* White text on hover */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add new items to skills or interests dynamically */
+.added-skill, .added-interest {
+  background-color: #B59F78; /* Golden Brown background for dynamically added items */
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin: 5px 0;
+  color: #ffffff; /* White text for added items */
+  font-size: 1em;
+  display: inline-block;
+}
+
+/* Form Elements for Skills and Interests */
+.skills-input, .interests-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f4f4f4; /* Light grey background for inputs */
+}
+
+.skills-input:focus, .interests-input:focus {
+  outline: none;
+  border-color: #2A3663; /* Deep Blue border on focus */
+  background-color: #fff; /* White background on focus */
+}
+
+.skills-btn, .interests-btn {
+  padding: 10px 15px;
+  background-color: #2A3663; /* Deep Blue button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.skills-btn:hover, .interests-btn:hover {
+  background-color: #B59F78; /* Golden Brown button on hover */
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+  }
+
+  .left_side, .right_side {
+    padding:20px;
+  }
+
+  .imgBx img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contactInfo ul li {
+    font-size: 0.9em;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  form input, form textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .left_side, .right_side {
+    padding: 15px;
+  }
+
+  .imgBx img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .left_side, .right_side {
+    padding: 10px;
+  }
+
+  .imgBx img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contactInfo ul li {
+    font-size: 0.8em;
+  }
+
+  #about-input {
+    min-height: 120px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media print {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Explicitly sets the desired grid size */
+    width: 100%;
+  }
+}
+
+
+@media print {
+  .imgBx img {
+    width: 150px; /* Adjusted to desired size */
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+
